@@ -3,14 +3,14 @@ import 'package:flutter_auth_ui/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   String? text;
-  Function()? press;
+  Function()? onPressed;
   Color? color;
   Color? textColor;
   bool? isLoading;
   RoundedButton({
     Key? key,
     this.text,
-    this.press,
+    this.onPressed,
     this.color = mtPrimaryColor,
     this.textColor = Colors.white,
     this.isLoading = false,
@@ -43,7 +43,7 @@ class RoundedButton extends StatelessWidget {
         text!,
         style: TextStyle(color: textColor),
       ),
-      onPressed: press!,
+      onPressed: onPressed!,
       style: ElevatedButton.styleFrom(
           primary: color,
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
